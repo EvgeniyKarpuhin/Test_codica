@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './index.css';
 import Weather from './Weather/weather';
+import './Weather/boxes';
 
 const capitalCity = ["Kiev", "Kharkiv", "Odessa", "Lviv"];
 
@@ -15,14 +16,14 @@ export default class App extends Component {
       <div className="app">
         
         { capitalCity.map((city, index) => (
-          <button 
+          <div className='countryBox'
           key={index}
           onClick={ () => 
           this.setState({ activePlace: index })
         }
         >
         {city}
-        </button>
+        </div>
         ))}
 
       <Weather

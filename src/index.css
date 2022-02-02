@@ -16,4 +16,12 @@ code {
   padding: 0;
   margin: 0 auto;
   text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.countryBox {
+  width: 100px;
+  height: 200px;
+  border: 2px solid red;
 }

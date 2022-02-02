@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component } from 'react';
+import './index.css';
+import Wheather from './weather/wheather';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+const capitalCity = ["Kiev", "Kharkiv", "Odessa", "Lviv"];
+
+export default class App extends Component {
+  state = {
+    activePlace: 0,
+  };
+
+  render() {
+    const activePlace = this.state.activePlace;
+    return (
+      <div className="app">
+        
+        { capitalCity.map((city, index) => (
+          <button 
+          key={index}
+          onClick={ () => 
+          this.setState({ activePlace: index })
+        }
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+        {city}
+        </button>
+        ))}
+
+      <Wheather
+        key={activePlace}
+        name={capitalCity[activePlace]} />
+      </div>
+    );
+  }
 }
 
-export default App;

@@ -1,6 +1,6 @@
-import React, {Component } from 'react';
+import React, { Component } from 'react';
 import './index.css';
-import Wheather from './weather/wheather';
+import Weather from './Weather/weather';
 
 const capitalCity = ["Kiev", "Kharkiv", "Odessa", "Lviv"];
 
@@ -25,7 +25,7 @@ export default class App extends Component {
         </button>
         ))}
 
-      <Wheather
+      <Weather
         key={activePlace}
         name={capitalCity[activePlace]} />
       </div>

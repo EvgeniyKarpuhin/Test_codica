@@ -23,7 +23,7 @@ export default class Wheather extends Component {
         return (
             <div>
                 <h1>
-                    {wheather.main} in {wheather.name}
+                    {wheather.main} in {wheatherData.name}
                     <img src={iconUrl} alt={wheather.description} />
                 </h1>
                 <p>Current: {wheatherData.main.temp}C</p>

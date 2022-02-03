@@ -5,7 +5,7 @@ import './Weather/boxes';
 
 const capitalCity = ["Kiev", "Kharkiv", "Odessa", "Lviv"];
 
-export default class App extends Component {
+class App extends Component {
   state = {
     activePlace: 0,
   };
@@ -14,15 +14,22 @@ export default class App extends Component {
     const activePlace = this.state.activePlace;
     return (
       <div className="app">
-        
         { capitalCity.map((city, index) => (
           <div className='countryBox'
+          style={
+            {width: '100px', 
+            height: '200px', 
+            border: '2px solid red', 
+            margin: '10px',
+            paddingTop: '10px'}
+          }
           key={index}
           onClick={ () => 
           this.setState({ activePlace: index })
         }
         >
         {city}
+        {/* <Weather /> */}
         </div>
         ))}
 
@@ -33,4 +40,5 @@ export default class App extends Component {
     );
   }
 }
+export default App
 

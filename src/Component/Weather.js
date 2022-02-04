@@ -26,12 +26,10 @@ class Weather extends Component {
                     {weather.main} in {weatherData.name}
                     <img src={iconUrl} alt={weather.description} />
                 </h1>
-                <p>Текущая температура: {weatherData.main.temp}°С</p>
-                <p>Самая высокая за день: {weatherData.main.temp_max}°С</p>
-                <p>Самая низкая за день: {weatherData.main.temp_min}°С</p>
+                <p>Температура: {weatherData.main.temp}°С</p>
                 <p>Скорость ветра: {weatherData.wind.speed} м/c</p>
             </div>
         );
     }
 }
-export default Weather
+export default Weather;

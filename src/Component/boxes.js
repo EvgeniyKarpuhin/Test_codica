@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Weather from './Weather';
 
 const capitalCity = ["Kiev", "Kharkiv", "Odessa", "Lviv"];
+// const URL = "https://api.openweathermap.org/data/2.5/weather?q=&lang=ru&units=metric&appid=a059085e330fce68f911321b65962676";
 
 class Boxes extends Component {
     state = {

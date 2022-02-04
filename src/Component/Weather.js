@@ -1,15 +1,21 @@
 import React, {Component} from 'react';
 
+const capitalCity = ["Kiev"];
+
 class Weather extends Component {
     state = {
         weatherData: null
     };
 
     componentDidMount() {
-        const name = this.props.name;
-        const URL = "https://api.openweathermap.org/data/2.5/weather?q=" 
-        + name + "&lang=ru&units=metric&appid=a059085e330fce68f911321b65962676";
-        fetch(URL).then(res => res.json()).then(json => {
+        // const name = this.props.name;
+        const URL = {
+            key: 'a059085e330fce68f911321b65962676',
+            base: "https://api.openweathermap.org/data/2.5/"
+        }
+        fetch(`${URL.base}weather?q=${capitalCity}&units=metric&appid=${URL.key}`)
+            .then(res => res.json())
+            .then(json => {
             this.setState({ weatherData: json });
         });
     }

@@ -2,12 +2,6 @@ import React from "react";
 import Weather from './Weather';
 
 const capitalCity = ["Kiev", "Kharkiv", "Odessa", "Lviv"];
-// const URL = "https://api.openweathermap.org/data/2.5/weather?q=&lang=ru&units=metric&appid=a059085e330fce68f911321b65962676";
-// class WeatherDisplay extends React.Component {
-//   render() {
-//     return <h1>Weather for city {this.props.name}</h1>
-//   }
-// }
 
 class Boxes extends React.Component {
     state = {
@@ -16,7 +10,7 @@ class Boxes extends React.Component {
 
     
     render() {
-        const activePlace = this.state.activePlace;
+        const activePlaces = this.state.activePlace;
         
         return (
           <div className="boxes">
@@ -25,27 +19,25 @@ class Boxes extends React.Component {
               
               <div className='countryBox'
               style={
-                {width: '200px', 
-                height: '300px', 
+                {width: '250px', 
+                height: '400px', 
                 border: '2px solid red', 
                 margin: '10px',
                 paddingTop: '10px'}
+              
               }
-              >
-                <button
               key={index}
               onClick={() =>
-              this.setState({activePlace: index})
-    } >
-      
-      {city}
-      </button>
+              this.setState({activePlaces: index})
+    } 
+              >
+                
+           {city}     
+              <Weather
+              key={activePlaces}
+              name={capitalCity[activePlaces]} />
       </div>
-            ))}
-
-            <Weather
-              key={activePlace}
-              name={capitalCity[activePlace]} />
+            ))} 
               </div>
         );
   }

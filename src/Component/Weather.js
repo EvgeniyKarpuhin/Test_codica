@@ -26,7 +26,7 @@ class Weather extends React.Component {
         return (
             <div>
                 <h1>
-                     {weatherData.name}: {weather.description}
+                     {weather.description}
                     <img src={iconUrl} alt={weather.description} />
                 </h1>
                 <p>Температура: {weatherData.main.temp}°С</p>

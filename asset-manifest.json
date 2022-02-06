@@ -1,16 +1,13 @@
 {
   "files": {
-    "main.css": "/Test_codica/static/css/main.073c9b0a.css",
-    "main.js": "/Test_codica/static/js/main.b61ec5dd.js",
-    "static/js/787.2227703e.chunk.js": "/Test_codica/static/js/787.2227703e.chunk.js",
-    "static/media/logo.svg": "/Test_codica/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/Test_codica/static/css/main.80d7158d.css",
+    "main.js": "/Test_codica/static/js/main.ef2a30e8.js",
     "index.html": "/Test_codica/index.html",
-    "main.073c9b0a.css.map": "/Test_codica/static/css/main.073c9b0a.css.map",
-    "main.b61ec5dd.js.map": "/Test_codica/static/js/main.b61ec5dd.js.map",
-    "787.2227703e.chunk.js.map": "/Test_codica/static/js/787.2227703e.chunk.js.map"
+    "main.80d7158d.css.map": "/Test_codica/static/css/main.80d7158d.css.map",
+    "main.ef2a30e8.js.map": "/Test_codica/static/js/main.ef2a30e8.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.b61ec5dd.js"
+    "static/css/main.80d7158d.css",
+    "static/js/main.ef2a30e8.js"
   ]
 }

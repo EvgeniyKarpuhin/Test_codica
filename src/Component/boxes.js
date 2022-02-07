@@ -28,6 +28,14 @@ class Boxes extends React.Component {
           >
             {city}
             <Weather key={activePlace} name={capitalCity[activePlace]} />
+            <button
+            className="weatheBtn"
+            style={{
+              marginTop: '20px'
+            }}
+            >
+              Обновить данные о погоде
+            </button>
           </div>
         ))}
       </div>

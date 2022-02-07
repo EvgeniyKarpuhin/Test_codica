@@ -5,7 +5,7 @@ const capitalCity = ["Kiev", "Kharkiv", "Odessa", "Lviv"];
 
 class Boxes extends React.Component {
   state = {
-    activePlace: 0,
+    activePlace: 0
   };
 
   render() {

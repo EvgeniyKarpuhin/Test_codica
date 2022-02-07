@@ -31,7 +31,8 @@ class Boxes extends React.Component {
             <button
             className="weatheBtn"
             style={{
-              marginTop: '20px'
+              marginTop: '20px',
+              padding: '5px'
             }}
             >
               Обновить данные о погоде

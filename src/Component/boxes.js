@@ -1,7 +1,7 @@
 import React from "react";
 import Weather from "./Weather";
 
-const capitalCity = ["Kiev", "Kharkiv", "Odessa", "Lviv", 'Dnepr'];
+let capitalCity = ["Kiev", "Kharkiv", "Odessa", "Lviv", 'Dnepr'];
 
 class Boxes extends React.Component {
   state = {

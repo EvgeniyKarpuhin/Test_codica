@@ -1,7 +1,7 @@
 import React from "react";
 import Weather from "./Weather";
 
-let capitalCity = ["Kiev", "Kharkiv", "Odessa", "Lviv", 'Dnepr'];
+let capitalCity = ["Kiev", "Kharkiv", "Odessa", "Lviv", "Dnepr"];
 
 class Boxes extends React.Component {
   state = {
@@ -16,34 +16,18 @@ class Boxes extends React.Component {
         {capitalCity.map((city, index) => (
           <div
             className="countryBox"
-            style={{
-              width: "250px",
-              height: "400px",
-              border: "2px solid red",
-              margin: "10px",
-              paddingTop: "10px",
-            }}
             key={index}
             onClick={() => this.setState({ activePlace: index })}
           >
             {city}
             <Weather key={activePlace} name={capitalCity[activePlace]} />
-            <button
-              className="weatheBtn"
-              style={{
-                marginTop: "20px",
-                padding: "5px",
-              }}
-            >
-              Обновить данные о погоде
-            </button>
+            <button className="weatheBtn">Обновить данные о погоде</button>
           </div>
         ))}
       </div>
     );
   }
 }
-
 
 // const weatherURL = "https://api.openweathermap.org/data/2.5/forecast?q=Kiev&lang=ru&units=metric&APPID=a059085e330fce68f911321b65962676";
 // const URL = {
